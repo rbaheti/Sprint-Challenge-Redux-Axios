@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const GET_SMURFS = "GET_SMURFS";
 export const ADD_SMURF = "ADD_SMURF";
-//export const UPDATE_SMURF = "UPDATE_SMURF";
+export const UPDATE_SMURF = "UPDATE_SMURF";
 
 export const getSmurfs = () => {
 	const smurfsEndpoint = 'http://localhost:3333/smurfs';
@@ -26,14 +26,14 @@ export const addSmurf = (smurf) => {
 	};
 }
 
-// export const updateSmurf = (smurf) => {
-// 	const updateSmurfEndpoint = 'http://localhost:3333/smurfs';
-//     const updateSmurfRequest = axios.put(updateSmurfEndpoint, smurf);
+export const updateSmurf = (smurf) => {
+	const updateSmurfEndpoint = 'http://localhost:3333/smurfs';
+    const updateSmurfRequest = axios.put(updateSmurfEndpoint, smurf);
     
-//     console.log(updateSmurfRequest);
+    console.log(updateSmurfRequest);
     
-//     return {
-// 		type: UPDATE_SMURF,
-// 		payload: updateSmurfRequest,
-// 	};
-// }
+    return {
+		type: UPDATE_SMURF,
+		payload: updateSmurfRequest,
+	};
+}

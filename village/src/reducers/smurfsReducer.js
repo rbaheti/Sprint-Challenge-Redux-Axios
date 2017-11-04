@@ -13,8 +13,8 @@ export default (smurfs = [], action) => {
 		case ADD_SMURF:
 			return action.payload.data;
 
-		// case UPDATE_SMURF:
-		// 	return action.payload.data;
+		case UPDATE_SMURF:
+			return action.payload.data;
 
 		default:
 			return smurfs;
